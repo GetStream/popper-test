@@ -1,20 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { TranslateModule } from '@ngx-translate/core';
 
 import { AppComponent } from './app.component';
-import {
-  StreamChatModule,
-  StreamAutocompleteTextareaModule,
-} from 'stream-chat-angular';
+import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     TranslateModule.forRoot(),
-    StreamAutocompleteTextareaModule,
-    StreamChatModule,
+    RouterModule.forRoot([
+      {
+        path: 'chat',
+        loadChildren: () =>
+          import('./chat/chat.module').then((m) => m.ChatModule),
+      },
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent],

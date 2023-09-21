@@ -19,9 +19,10 @@
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
     "@ngx-translate/core": "^14.0.0",
+    "ngx-popperjs": "^16.0.6",
     "rxjs": "~7.8.0",
-    "stream-chat": "^8.10.1",
-    "stream-chat-angular": "^4.32.2",
+    "stream-chat": "^8.11.0",
+    "stream-chat-angular": "^4.39.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },
@@ -37,5 +38,10 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~5.0.2"
+  },
+  "overrides": {
+    "stream-chat-angular": {
+      "ngx-popperjs": "^16.0.6"
+    }
   }
 }
