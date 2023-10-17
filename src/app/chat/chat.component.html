@@ -1,11 +1,3 @@
-<div id="root">
-  <stream-channel-list></stream-channel-list>
-  <stream-channel>
-    <stream-channel-header></stream-channel-header>
-    <stream-message-list></stream-message-list>
-    <stream-thread name="thread">
-      <stream-message-list mode="thread"></stream-message-list>
-      <stream-message-input mode="thread"></stream-message-input>
-    </stream-thread>
-  </stream-channel>
+<div class="str-chat">
+  <stream-message [message]="message"></stream-message>
 </div>
