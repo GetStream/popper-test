@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ChatComponent } from './chat.component';
+import { MessageComponent } from './message/message.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 
+
+
 @NgModule({
-  declarations: [ChatComponent],
+  declarations: [
+    MessageComponent
+  ],
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule.forChild([{ path: '', component: ChatComponent }]),
-  ],
+    RouterModule.forChild([{ path: '', component: MessageComponent }]),
+  ]
 })
-export class ChatModule {}
+export class MessageModule { }
